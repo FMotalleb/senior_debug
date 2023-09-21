@@ -1,6 +1,6 @@
 name: senior_debug
 description: debug like a senior using `here` and `here`
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/FMotalleb/dart_senior_debug
 
 environment:
