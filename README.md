@@ -1,7 +1,7 @@
-## Debug Like a senior
+## Debug Like a Senior
 
-**Only for development**
-remove the dependency in release or use it as a dev dependency
+**For Development Only**
+Remove the dependency in the release or use it as a development dependency.
 
 ```dart
 import 'package:senior_debug/senior_debug.dart';
@@ -17,18 +17,18 @@ void main() {
 
   SeniorDebug('Test')[15];
 }
-/*Out:
+/*Output:
   > here 0
   > here 1
   > here 2
   > here 3
   > here 4
-  > file:///home/(usr)/Documents/GitHub/senior_debug/example/senior_debug_example.dart:9:3
+  > file:///.../senior_debug/example/senior_debug_example.dart:9:3
   > 
   > here WHERE IS THIS
-  > file:///home/(usr)/Documents/GitHub/senior_debug/example/senior_debug_example.dart:10:10
+  > file:///.../example/senior_debug_example.dart:10:10
   > 
   > Test 15
-  > file:///home/motalleb/Documents/GitHub/senior_debug/example/senior_debug_example.dart:12:22
+  > file:///.../example/senior_debug_example.dart:12:22
 */
 ```
