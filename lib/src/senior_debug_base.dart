@@ -17,14 +17,14 @@ class SeniorDebug {
     }
     if (printStackTrace) {
       final st = Chain.current().terse;
-      final st2 = st
-          .foldFrames((p0) {
-            // print(p0.library + '${counter++}');
-            return p0.uri.path != 'package:senior_debug/src/senior_debug_base.dart';
-          })
-          .toTrace()
-          .frames
-          .map((e) => '${e.uri}:${e.line}:${e.column}');
+
+      final st2 = st.traces
+          .map((e) => e.frames)
+          .expand((element) => element)
+          .map((e) => '${e.uri.toString()}:${e.line}:${e.column}')
+          .where((element) => !element.contains('senior_debug/src/senior_debug_base.dart'))
+          .indexed
+          .map((e) => '#${e.$1} ${e.$2}');
       buffer.writeln();
       buffer.writeln(st2.join('\n').trim());
       // print(StackTrace.current);
