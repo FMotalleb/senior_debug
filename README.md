@@ -1,4 +1,4 @@
-Debug Like a senior
+## Debug Like a senior
 
 **Only for development**
 remove the dependency in release or use it as a dev dependency
